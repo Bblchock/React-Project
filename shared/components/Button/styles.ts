@@ -1,4 +1,4 @@
-import { MuiButton, styled } from 'shared';
+import { MuiButton, styled } from '../external';
 
 import { ButtonProps } from './Button';
 

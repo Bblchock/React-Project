@@ -1,11 +1,9 @@
 import { Suspense } from 'react';
 
-import { Route, Routes } from 'shared';
+import { Route, Routes, Loader } from 'shared';
 import { HomePage } from 'pages/HomePage';
 
 import { routeList } from './routeList';
-
-import { Loader } from 'components';
 
 export const Routing = () => (
   <Routes>

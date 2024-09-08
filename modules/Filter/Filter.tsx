@@ -7,10 +7,9 @@ import {
   createFilterStore,
 } from 'data';
 import { observer } from 'mobx-react-lite';
+import { Button } from 'shared';
 
 import { ButtonGroup, ButtonsWrapper } from './styles';
-
-import { Button } from 'components';
 
 export const Filter = observer(() => {
   const [

@@ -1,6 +1,6 @@
-import { readLocalStorage, saveLocalStorage } from './utils';
+import { routeList, RoutingData } from 'shared';
 
-import { routeList, RoutingData } from 'components';
+import { readLocalStorage, saveLocalStorage } from './utils';
 
 export const settingsData = {
   readDrawerState: (): boolean => {

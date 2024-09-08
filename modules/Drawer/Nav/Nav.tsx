@@ -1,9 +1,8 @@
 import { List, ListItem, ListItemIcon, ListItemText, Link } from 'shared';
-import type { SettingsStore } from 'store';
+import { RoutingData } from 'modules';
+import { SettingsStore } from 'data';
 
 import { UiListItemButton } from './styles';
-
-import { RoutingData } from 'components';
 
 type NavProps = {
   setCurrentPage: SettingsStore['setCurrentPage'];

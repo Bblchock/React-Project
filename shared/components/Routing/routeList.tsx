@@ -1,7 +1,8 @@
 import { ReactElement } from 'react';
 
-import { HomeIcon, PhoneIcon, TuneIcon } from 'shared';
 import { HomePage } from 'pages/HomePage';
+
+import { HomeIcon, PhoneIcon, TuneIcon } from '../../icons';
 
 import { ChampionsFilterLazy, ContactsLazy } from './constants';
 
