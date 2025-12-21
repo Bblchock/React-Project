@@ -6,6 +6,7 @@ export enum RoleFilter {
   fighter = 'fighter',
   assassin = 'assassin',
 }
+
 export enum PositionFilter {
   top = 'top',
   mid = 'mid',

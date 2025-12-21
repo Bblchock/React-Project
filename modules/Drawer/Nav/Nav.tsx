@@ -1,6 +1,12 @@
-import { List, ListItem, ListItemIcon, ListItemText, Link } from 'shared';
-import { RoutingData } from 'modules';
-import { SettingsStore } from 'data';
+import {
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Link,
+  type RoutingData,
+} from 'shared';
+import { type SettingsStore } from 'data';
 
 import { UiListItemButton } from './styles';
 

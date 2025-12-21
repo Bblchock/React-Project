@@ -1,16 +1,8 @@
-import { MuiCardProps } from 'shared';
-
-import { Name, UiCard, Img } from './styles';
-
-export interface CardProps extends MuiCardProps {
-  rung: number;
-  name: string;
-  imgUrl: string;
-}
+import { Name, UiCard, Img, CardProps } from './styles';
 
 export const Card = ({ rung, name, imgUrl, ...props }: CardProps) => {
   return (
-    <UiCard size="small" rung={rung} fullWidth {...props}>
+    <UiCard rung={rung} name={name} imgUrl={imgUrl} {...props}>
       <Img src={imgUrl} alt={`picture of ${name}`} />
       <Name>{name}</Name>
     </UiCard>

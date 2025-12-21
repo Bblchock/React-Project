@@ -1,6 +1,6 @@
 import { makeAutoObservable } from 'mobx';
-import { PositionFilter, RoleFilter, RungFilter } from 'data';
 
+import { PositionFilter, RoleFilter, RungFilter } from '../enums';
 import { ChampionsStore, championsStore } from '../championsStore';
 
 export class FilterStore {

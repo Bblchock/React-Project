@@ -1,12 +1,13 @@
 import { makeAutoObservable } from 'mobx';
+import { RoutingData, routeList } from 'shared';
 
 import { settingsData, settingsDataType } from './methods';
 
-import { RoutingData } from 'components';
+const DEFAULT_PAGE: RoutingData = routeList[0];
 
 export class SettingsStore {
   public isDrawerOpen: boolean = true;
-  public currentPage: RoutingData = {} as RoutingData;
+  public currentPage: RoutingData = DEFAULT_PAGE;
   public drawerWidth: number = 220;
 
   constructor(private readonly settingsData: settingsDataType) {
@@ -16,7 +17,16 @@ export class SettingsStore {
 
   private refreshSettings(): void {
     this.isDrawerOpen = this.settingsData.readDrawerState();
-    this.currentPage = this.settingsData.readCurrentPage();
+    const savedPage = this.settingsData.readCurrentPage();
+    this.currentPage = this.isValidPage(savedPage) ? savedPage : DEFAULT_PAGE;
+  }
+
+  private isValidPage(page: RoutingData | null): page is RoutingData {
+    return (
+      page !== null &&
+      typeof page.id === 'number' &&
+      typeof page.path === 'string'
+    );
   }
 
   public setDrawerState(newDrawerState: boolean): void {

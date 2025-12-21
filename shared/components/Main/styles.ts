@@ -1,4 +1,4 @@
-import { styled } from 'shared';
+import { styled } from '../external';
 
 export const UiMain = styled('main')`
   margin: ${({ theme }) => theme.spacing(9, 'auto')};

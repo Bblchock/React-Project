@@ -1,4 +1,4 @@
-import { styled } from 'shared';
+import { styled } from '../external';
 
 const setAnimationWithDelay = (delay: string): string => {
   return `loader-size 1.5s infinite linear alternate ${delay}s,

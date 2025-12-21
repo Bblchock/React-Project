@@ -5,6 +5,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "types": ["vitest/globals"],
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -29,13 +30,12 @@
       "pages/*": ["pages/*"],
       "shared": ["shared"],
       "data": ["data"],
+      "types": ["types"],
       "modules": ["modules"],
-      "public": ["public"],
+      "public": ["public"]
     }
   },
-  "include": [
-    "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.mts"
-  ],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.mts"],
   "exclude": ["node_modules"],
-  "references": [{ "path": "./tsconfig.node.json"}],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

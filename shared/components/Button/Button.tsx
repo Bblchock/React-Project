@@ -1,4 +1,4 @@
-import { MuiButtonProps } from 'shared';
+import { type MuiButtonProps } from '../external';
 
 import { UiButton } from './styles';
 

@@ -1,23 +1,28 @@
+import { useMemo, memo } from 'react';
+
 import { observer } from 'mobx-react-lite';
-import { Champion } from 'public';
-import { championsStore } from 'data';
+import { championsStore, type Champion } from 'data';
 
 import { Card } from './Card';
 import { ChampionsWrapper } from './styles';
 
+const MemoizedCard = memo(Card);
+
 export const Champions = observer(() => {
   const { champions } = championsStore;
 
-  return (
-    <ChampionsWrapper>
-      {champions.map((obj: Champion) => (
-        <Card
+  const championCards = useMemo(
+    () =>
+      champions.map((obj: Champion) => (
+        <MemoizedCard
           rung={Number(obj.rung)}
-          key={obj.name}
+          key={obj.id}
           imgUrl={obj.img}
           name={obj.name}
         />
-      ))}
-    </ChampionsWrapper>
+      )),
+    [champions],
   );
+
+  return <ChampionsWrapper>{championCards}</ChampionsWrapper>;
 });

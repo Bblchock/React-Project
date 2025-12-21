@@ -18,9 +18,10 @@ export {
   ListItemText,
   ListItemIcon,
   Card as MuiCard,
-  styled,
   ThemeProvider,
 } from '@mui/material';
+
+export { styled } from '@mui/material/styles';
 
 export type {
   TypeBackground,

@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { type ReactNode } from 'react';
 
 import { PhoneIcon, TuneIcon } from '../../icons';
 
@@ -6,9 +6,9 @@ import { ChampionsFilterLazy, ContactsLazy } from './constants';
 
 export type RoutingData = {
   title: string;
-  icon: ReactElement;
+  icon: ReactNode;
   path: string;
-  module: ReactElement;
+  module: ReactNode;
   id: number;
 };
 

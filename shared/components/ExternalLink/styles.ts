@@ -1,4 +1,4 @@
-import { styled } from 'shared';
+import { styled } from '../external';
 
 export const UiLink = styled('a')`
   &[href*='https']:after {

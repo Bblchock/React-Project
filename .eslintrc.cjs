@@ -14,36 +14,39 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    "import/order": [
-      "error",
+    'import/order': [
+      'error',
       {
-        "pathGroups": [
+        pathGroups: [
           {
-            "pattern": "react**",
-            "group": "builtin",
-            "position": "before"
+            pattern: 'react**',
+            group: 'builtin',
+            position: 'before',
           },
           {
-            "pattern": "components",
-            "group": "internal",
-            "position": "after"
+            pattern: 'shared',
+            group: 'internal',
+            position: 'after',
           },
           {
-            "pattern": "redux",
-            "group": "internal",
-            "position": "after"
+            pattern: 'data',
+            group: 'internal',
+            position: 'after',
           },
           {
-            "pattern": "pages",
-            "group": "internal",
-            "position": "after"
+            pattern: 'modules',
+            group: 'internal',
+            position: 'after',
+          },
+          {
+            pattern: 'pages/**',
+            group: 'internal',
+            position: 'after',
           },
         ],
-        "newlines-between": "always",
-        "pathGroupsExcludedImportTypes": [
-          "react"
-        ]
-      }
-    ]
+        'newlines-between': 'always',
+        pathGroupsExcludedImportTypes: ['react'],
+      },
+    ],
   },
-}
+};

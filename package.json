@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
+    "lint:types": "tsc --noEmit",
+    "lint": "eslint . --fix",
     "preview": "vite preview",
-    "tests": "vitest run",
+    "test": "vitest run",
     "prettier": "prettier . --write"
   },
   "dependencies": {
@@ -25,9 +27,6 @@
     "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "@types/react": "^18.2.73",
     "@types/react-dom": "^18.2.23",
     "@typescript-eslint/eslint-plugin": "^7.4.0",
@@ -40,9 +39,11 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "gh-pages": "^4.0.0",
+    "jsdom": "^24.0.0",
     "prettier": "^3.2.5",
     "typescript": "^5.4.3",
     "vite": "^5.2.7",
-    "vite-tsconfig-paths": "^4.3.2"
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.4.0"
   }
 }

@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 
-import { Route, Routes, Loader, Navigate } from 'shared';
+import { Route, Routes, Navigate } from '../../external';
+import { Loader } from '../Loader';
 
 import { routeList } from './routeList';
 

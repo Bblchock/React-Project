@@ -1,26 +1,28 @@
 import { makeAutoObservable } from 'mobx';
-import { Champion, champions } from 'public/champions';
 
-import { PositionFilter, RoleFilter, RungFilter } from '../filterStore';
+import { type Champion } from '../types';
+import { PositionFilter, RoleFilter, RungFilter } from '../enums';
+import { champions } from '../champions';
 
 export class ChampionsStore {
-  private previousRung?: RungFilter;
-  private readonly allChampions: Champion[] = [] as Champion[];
-  public champions: typeof this.allChampions = [] as typeof this.allChampions;
-  private filteredByRung: typeof this.champions;
+  public champions: Champion[];
 
-  constructor(private readonly championsData: Champion[]) {
+  private previousRung?: RungFilter;
+  private allChampions: Champion[];
+  private filteredByRung: Champion[];
+
+  constructor(championsData: Champion[]) {
+    this.allChampions = championsData;
+    this.champions = championsData;
+    this.filteredByRung = championsData;
     makeAutoObservable(this, {}, { autoBind: true });
-    this.allChampions = this.championsData;
-    this.filteredByRung = this.allChampions;
-    this.showAllChampions();
   }
 
   public showAllChampions(): void {
     this.champions = this.allChampions;
   }
 
-  private getFilteredByRung(rung: RungFilter): typeof this.champions {
+  private getFilteredByRung(rung: RungFilter): Champion[] {
     return this.allChampions.filter((champion) =>
       this.isTargetRung(champion.rung, rung),
     );
@@ -28,7 +30,7 @@ export class ChampionsStore {
 
   private getFilteredByProperties(
     filters: Array<PositionFilter | RoleFilter>,
-  ): typeof this.champions {
+  ): Champion[] {
     return this.filteredByRung.filter((champ) => {
       const roleAndPosition = [...champ.role, ...champ.position];
       return filters.every((property) => roleAndPosition.includes(property));

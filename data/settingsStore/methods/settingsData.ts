@@ -1,4 +1,4 @@
-import { routeList, RoutingData } from 'shared';
+import { RoutingData } from 'shared';
 
 import { readLocalStorage, saveLocalStorage } from './utils';
 
@@ -11,8 +11,8 @@ export const settingsData = {
     saveLocalStorage('drawer', drawerState);
   },
 
-  readCurrentPage: (): RoutingData => {
-    return readLocalStorage('currentPage', routeList[0]);
+  readCurrentPage: (): RoutingData | null => {
+    return readLocalStorage<RoutingData | null>('currentPage', null);
   },
 
   saveCurrentPage: (currentPage: RoutingData): void => {

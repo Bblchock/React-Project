@@ -1,21 +1,26 @@
-import { PositionFilter, RoleFilter, RungFilter } from './enums.ts';
+import { PositionFilter, RoleFilter, RungFilter } from '../enums';
 
 type FilterBlock = 'position' | 'role';
 
-type FilterButton = {
-  id: RoleFilter | RungFilter | PositionFilter;
+type PropertyFilterButton = {
+  id: RoleFilter | PositionFilter;
   title: string;
-}[];
+};
+
+type RungFilterButton = {
+  id: RungFilter;
+  title: string;
+};
 
 export const DEFAULT_FILTER = 'all';
 
-export const filtersByRung: FilterButton = [
+export const filtersByRung: RungFilterButton[] = [
   { id: RungFilter.max, title: 'MaxRung' },
   { id: RungFilter.high, title: 'Rung 5-6' },
   { id: RungFilter.low, title: 'Rung < 5' },
 ];
 
-export const propertiesFilters: Record<FilterBlock, FilterButton> = {
+export const propertiesFilters: Record<FilterBlock, PropertyFilterButton[]> = {
   position: [
     { id: PositionFilter.top, title: 'Top' },
     { id: PositionFilter.mid, title: 'Mid' },

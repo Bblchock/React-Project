@@ -1,6 +1,10 @@
-import { MuiCard, styled } from 'shared';
+import { MuiCard, styled, type MuiCardProps } from 'shared';
 
-import { CardProps } from './Card';
+export interface CardProps extends MuiCardProps {
+  rung: number;
+  name: string;
+  imgUrl: string;
+}
 
 const getFrameColor = (rung: CardProps['rung']) => {
   switch (rung) {
@@ -16,7 +20,8 @@ const getFrameColor = (rung: CardProps['rung']) => {
 };
 
 export const UiCard = styled(MuiCard, {
-  shouldForwardProp: (prop) => prop !== 'rung' && prop !== 'fullWidth',
+  shouldForwardProp: (prop) =>
+    prop !== 'rung' && prop !== 'name' && prop !== 'imgUrl',
 })<CardProps>`
   display: grid;
   grid-template-columns: repeat(2, 1fr);

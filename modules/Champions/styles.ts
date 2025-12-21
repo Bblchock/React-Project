@@ -5,4 +5,5 @@ export const ChampionsWrapper = styled('section')`
   flex: 1 1 100px;
   flex-wrap: wrap;
   text-align: center;
+  justify-content: center;
 `;
