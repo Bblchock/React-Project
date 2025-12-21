@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 
 import { PositionFilter, RoleFilter, RungFilter } from '../../data/enums';
-import { type Champion } from '../../data/champions';
+import { type Champion } from '../../data/types';
 
 const mockChampions: Champion[] = [
   {
