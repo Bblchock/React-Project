@@ -4,6 +4,7 @@ import { observer } from 'mobx-react-lite';
 import { AppBar, Drawer, ThemeBar } from 'modules';
 import {
   CssBaseline,
+  ErrorBoundary,
   GlobalStyles,
   ThemeProvider,
   useNavigate,
@@ -31,7 +32,9 @@ export const App = observer(() => {
       <ThemeBar />
 
       <Main>
-        <Routing />
+        <ErrorBoundary>
+          <Routing />
+        </ErrorBoundary>
       </Main>
     </ThemeProvider>
   );
