@@ -1,7 +1,8 @@
 import { makeAutoObservable } from 'mobx';
-import { RoutingData, routeList } from 'shared';
 
 import { settingsData, settingsDataType } from './methods';
+
+import { RoutingData, routeList } from 'shared';
 
 const DEFAULT_PAGE: RoutingData = routeList[0];
 

@@ -1,3 +1,5 @@
+import { UiListItemButton } from './styles';
+
 import {
   List,
   ListItem,
@@ -6,9 +8,8 @@ import {
   Link,
   type RoutingData,
 } from 'shared';
-import { type SettingsStore } from 'data';
 
-import { UiListItemButton } from './styles';
+import { type SettingsStore } from 'data';
 
 type NavProps = {
   setCurrentPage: SettingsStore['setCurrentPage'];

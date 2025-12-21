@@ -1,9 +1,11 @@
-import { MenuIcon, type MuiAppBarProps, Toolbar, Typography } from 'shared';
-import { settingsStore, themeStore } from 'data';
 import { observer } from 'mobx-react-lite';
 
 import { UiAppBar } from './styles';
 import { IconButton } from './IconButton';
+
+import { MenuIcon, type MuiAppBarProps, Toolbar, Typography } from 'shared';
+
+import { settingsStore, themeStore } from 'data';
 
 export interface AppBarProps extends MuiAppBarProps {
   open: boolean;

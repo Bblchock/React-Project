@@ -1,6 +1,6 @@
-import { RoutingData } from 'shared';
-
 import { readLocalStorage, saveLocalStorage } from './utils';
+
+import { RoutingData } from 'shared';
 
 export const settingsData = {
   readDrawerState: (): boolean => {

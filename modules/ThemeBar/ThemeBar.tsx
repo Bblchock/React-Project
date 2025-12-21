@@ -1,14 +1,16 @@
+import { observer } from 'mobx-react-lite';
+
+import { Wrapper } from './styles';
+import { SpeedDial } from './SpeedDial';
+
 import {
   SpeedDialAction,
   DarkModeIcon,
   PaletteIcon,
   Brightness7Icon,
 } from 'shared';
-import { COLORS, themeModes, themeStore } from 'data';
-import { observer } from 'mobx-react-lite';
 
-import { Wrapper } from './styles';
-import { SpeedDial } from './SpeedDial';
+import { COLORS, themeModes, themeStore } from 'data';
 
 export const ThemeBar = observer(() => {
   const { isDarkMode, palette, setDarkMode, setPrimaryColor } = themeStore;

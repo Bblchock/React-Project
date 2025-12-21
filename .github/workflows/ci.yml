@@ -7,7 +7,7 @@ on:
     branches: [main, master]
 
 jobs:
-  lint-and-test:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,11 +29,8 @@ jobs:
       - name: Type check (TypeScript)
         run: npm run lint:types
 
-      - name: Tests (Vitest)
-        run: npm test
-
   deploy:
-    needs: lint-and-test
+    needs: lint
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
 

@@ -1,7 +1,8 @@
-import type { MuiIconButtonProps } from 'shared';
-import { settingsStore } from 'data';
-
 import { UiIconButton } from './styles';
+
+import type { MuiIconButtonProps } from 'shared';
+
+import { settingsStore } from 'data';
 
 export interface IconButtonProps extends MuiIconButtonProps {
   isDrawerOpen: boolean;

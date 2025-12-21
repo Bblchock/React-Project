@@ -1,6 +1,6 @@
-import { Email, ExternalLink, Phone, Typography, Contact } from 'shared';
-
 import { Wrapper, Title } from './styles';
+
+import { Email, ExternalLink, Phone, Typography, Contact } from 'shared';
 
 export const Contacts = () => {
   return (

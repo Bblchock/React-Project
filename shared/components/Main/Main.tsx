@@ -1,11 +1,11 @@
-import { ReactNode } from 'react';
+import { HTMLAttributes, ReactNode } from 'react';
 
 import { UiMain } from './styles';
 
-type MainProps = {
+interface MainProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode;
-};
+}
 
-export const Main = ({ children }: MainProps) => {
-  return <UiMain>{children}</UiMain>;
+export const Main = ({ children, ...props }: MainProps) => {
+  return <UiMain {...props}>{children}</UiMain>;
 };

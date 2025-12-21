@@ -1,3 +1,8 @@
+import { observer } from 'mobx-react-lite';
+
+import { DrawerHeader, UiDrawer } from './styles';
+import { Nav } from './Nav';
+
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -5,11 +10,8 @@ import {
   IconButton,
   routeList,
 } from 'shared';
-import { settingsStore, themeStore } from 'data';
-import { observer } from 'mobx-react-lite';
 
-import { DrawerHeader, UiDrawer } from './styles';
-import { Nav } from './Nav';
+import { settingsStore, themeStore } from 'data';
 
 export const Drawer = observer(() => {
   const { drawerWidth, isDrawerOpen, setDrawerState, setCurrentPage } =
@@ -24,7 +26,10 @@ export const Drawer = observer(() => {
       drawerWidth={drawerWidth}
     >
       <DrawerHeader>
-        <IconButton onClick={() => setDrawerState(false)}>
+        <IconButton
+          onClick={() => setDrawerState(false)}
+          aria-label="Закрыть меню"
+        >
           {theme.direction === 'ltr' ? (
             <ChevronLeftIcon />
           ) : (

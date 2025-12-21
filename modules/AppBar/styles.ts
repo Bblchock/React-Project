@@ -1,6 +1,6 @@
-import { MuiAppBar, styled } from 'shared';
-
 import { AppBarProps } from './AppBar';
+
+import { MuiAppBar, styled } from 'shared';
 
 export const UiAppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open' && prop !== 'drawerWidth',

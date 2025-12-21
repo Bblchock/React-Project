@@ -8,9 +8,16 @@ export interface ButtonProps extends MuiButtonProps {
   isActive: boolean;
 }
 
-export const Button = ({ children, ...props }: ButtonProps) => {
+export const Button = ({ children, isActive, ...props }: ButtonProps) => {
   return (
-    <UiButton variant="contained" size="small" fullWidth {...props}>
+    <UiButton
+      variant="contained"
+      size="small"
+      fullWidth
+      isActive={isActive}
+      aria-pressed={isActive}
+      {...props}
+    >
       {children}
     </UiButton>
   );

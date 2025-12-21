@@ -1,6 +1,6 @@
-import { type SpeedDialProps } from 'shared';
-
 import { UiSpeedDial } from './styles';
+
+import { type SpeedDialProps } from 'shared';
 
 export interface CustomSpeedDial extends SpeedDialProps {
   isDarkMode: boolean;

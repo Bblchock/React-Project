@@ -1,6 +1,6 @@
-import { styled, IconButton as MuiIconButton } from 'shared';
-
 import { IconButtonProps } from './IconButton';
+
+import { styled, IconButton as MuiIconButton } from 'shared';
 
 export const UiIconButton = styled(MuiIconButton, {
   shouldForwardProp: (prop) =>

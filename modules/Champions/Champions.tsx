@@ -1,10 +1,11 @@
 import { useMemo, memo } from 'react';
 
 import { observer } from 'mobx-react-lite';
-import { championsStore, type Champion } from 'data';
 
 import { Card } from './Card';
 import { ChampionsWrapper } from './styles';
+
+import { championsStore, type Champion } from 'data';
 
 const MemoizedCard = memo(Card);
 

@@ -1,6 +1,6 @@
-import { Palette, PaletteMode, TypeBackground } from 'shared';
-
 import { COLORS } from './enums.ts';
+
+import { Palette, PaletteMode, TypeBackground } from 'shared';
 
 export type Color = {
   main: string;

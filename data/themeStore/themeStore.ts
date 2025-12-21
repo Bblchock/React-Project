@@ -1,10 +1,11 @@
 import { makeAutoObservable } from 'mobx';
 import { createTheme } from '@mui/material/styles';
-import { Theme } from 'shared';
 
 import { themeData, themeDataType } from './methods';
 import { COLORS } from './enums';
 import { CustomPalette, palette, themeModes } from './constants';
+
+import { Theme } from 'shared';
 
 class ThemeStore {
   public theme: Theme = createTheme({});

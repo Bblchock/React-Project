@@ -1,6 +1,6 @@
-import { MuiSpeedDial, styled } from 'shared';
-
 import { CustomSpeedDial } from './SpeedDial';
+
+import { MuiSpeedDial, styled } from 'shared';
 
 export const UiSpeedDial = styled(MuiSpeedDial, {
   shouldForwardProp: (prop) => prop !== 'isDarkMode',
