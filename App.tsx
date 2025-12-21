@@ -1,16 +1,21 @@
 import { useEffect } from 'react';
 
 import { observer } from 'mobx-react-lite';
-import { AppBar, Drawer, ThemeBar } from 'modules';
+
 import {
   CssBaseline,
+  ErrorBoundary,
   GlobalStyles,
+  SkipLink,
   ThemeProvider,
   useNavigate,
   Main,
   Routing,
 } from 'shared';
+
 import { themeStore, settingsStore } from 'data';
+
+import { AppBar, Drawer, ThemeBar } from 'modules';
 
 export const App = observer(() => {
   const navigate = useNavigate();
@@ -26,12 +31,15 @@ export const App = observer(() => {
     <ThemeProvider theme={themeStore.theme}>
       <CssBaseline />
       <GlobalStyles />
+      <SkipLink />
       <AppBar />
       <Drawer />
       <ThemeBar />
 
-      <Main>
-        <Routing />
+      <Main id="main-content" tabIndex={-1}>
+        <ErrorBoundary>
+          <Routing />
+        </ErrorBoundary>
       </Main>
     </ThemeProvider>
   );
