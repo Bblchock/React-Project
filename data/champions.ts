@@ -1303,7 +1303,3 @@ export const champions: Champion[] = [
     img: 'https://i.ibb.co/VtSP34T/yasuo.jpg',
   },
 ];
-
-// Key
-// 4870058c-5a7d-11ed-b1c3-0242ac110002
-// https://extendsclass.com/mock/rest/eec80d67d8d5edbc8949336f913bed41/champions
