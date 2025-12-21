@@ -2,6 +2,7 @@ export * from './Button';
 export * from './Contact';
 export * from './Email';
 export * from './ExternalLink';
+export * from './GlobalStyles';
 export * from './Loader';
 export * from './Main';
 export * from './Phone';
